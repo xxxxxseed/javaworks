@@ -18,7 +18,7 @@ public class Opertaor4 {
 		
 		int fatherAge = 45, motherAge =47;
 		char ch;
-		ch = (fatherAge > motherAge) ? 'T' : 'F';
+		ch = (fatherAge < motherAge) ? 'T' : 'F';
 		System.out.println(ch);
 
 	}
