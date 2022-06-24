@@ -1,4 +1,4 @@
-package nestedfor;
+package loopexample;
 
 public class ForEx {
 
