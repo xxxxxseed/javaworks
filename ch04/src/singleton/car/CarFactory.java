@@ -1,7 +1,7 @@
-package singleton;
+package singleton.car;
 
 public class CarFactory {
-
+	//싱글톤 패턴
 	private static CarFactory instance = new CarFactory();
 	
 	private CarFactory() {}

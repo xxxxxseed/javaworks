@@ -3,6 +3,7 @@ package statics;
 public class StudentTest2 {
 
 	public static void main(String[] args) {
+		//학생 객체 생성
 		Student2 lee = new Student2();
 		Student2 han = new Student2();
 		
