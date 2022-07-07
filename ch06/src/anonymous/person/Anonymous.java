@@ -1,4 +1,4 @@
-package anonymous;
+package anonymous.person;
 
 public class Anonymous {
 
@@ -30,7 +30,7 @@ public class Anonymous {
 				walk();
 			}
 		};
-		localVar.wake();
+		localVar.wake(); //함수 실행
 	} //method1 닫기
 	
 	//메서드의 매개변수로 객체 전달

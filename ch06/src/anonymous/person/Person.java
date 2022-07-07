@@ -1,4 +1,4 @@
-package anonymous;
+package anonymous.person;
 
 public class Person {
 
