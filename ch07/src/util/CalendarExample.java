@@ -14,7 +14,7 @@ public class CalendarExample {
 		int day = now.get(Calendar.DAY_OF_MONTH);
 		
 		//일-1, 월-2 ... 토-6
-		int week = now.get(Calendar.DAY_OF_WEEK);
+		/*int week = now.get(Calendar.DAY_OF_WEEK);
 		String strWeek = null;
 		switch(week) {
 		case Calendar.MONDAY:
@@ -38,7 +38,12 @@ public class CalendarExample {
 		case Calendar.SUNDAY:
 			strWeek = "일";
 			break;
-		}
+		}*/
+		
+		//배열로 요일 출력
+		String[] days = new String[] {"일", "월", "화", "수", "목", "금", "토"};
+		int dayOfWeek = now.get(Calendar.DAY_OF_WEEK);
+		String strWeek = days[dayOfWeek - 1];
 		
 		//오전, 오후
 		int amPm = now.get(Calendar.AM_PM);
@@ -49,7 +54,8 @@ public class CalendarExample {
 			strAmPm = "오후";
 		}
 		
-		int hour = now.get(Calendar.HOUR);
+		int hour = now.get(Calendar.HOUR);	//시간 - 12시간제
+		//int hour = now.get(Calendar.HOUR_OF_DAY);	//시간 - 24시간제
 		int minute = now.get(Calendar.MINUTE);
 		int second = now.get(Calendar.SECOND);
 		
