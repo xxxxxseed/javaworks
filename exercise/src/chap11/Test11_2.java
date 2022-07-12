@@ -21,10 +21,14 @@ public class Test11_2 {
 		Calendar now2 = Calendar.getInstance();
 		
 		int year = now2.get(Calendar.YEAR);
-		int month = now2.get(Calendar.MONTH) + 1;
-		int day = now2.get(Calendar.DAY_OF_MONTH);
 		
-		int week = now2.get(Calendar.DAY_OF_WEEK);
+		int month = now2.get(Calendar.MONTH) + 1;
+		String strMonth = (month < 10) ? ("0" + month) : ("" + month);
+		
+		int day = now2.get(Calendar.DAY_OF_MONTH);
+		String strDay = (day < 10) ? ("0" + day) : ("" + day);
+		
+		/*int week = now2.get(Calendar.DAY_OF_WEEK);
 		String strWeek = null;
 		switch(week) {
 		case Calendar.MONDAY:
@@ -48,13 +52,20 @@ public class Test11_2 {
 		case Calendar.SUNDAY:
 			strWeek = "일";
 			break;
-		}
+		}*/
+		
+		String[] days = new String[] {"일", "월", "화", "수", "목", "금", "토"};
+		int dayOfWeek = now2.get(Calendar.DAY_OF_WEEK);
+		String strWeek = days[dayOfWeek - 1];
 		
 		int hour = now2.get(Calendar.HOUR_OF_DAY);
-		int minute = now2.get(Calendar.MINUTE);
+		String strHour = (hour < 10) ? ("0" + hour) : ("" + hour);
 		
-		System.out.println(year + "년 " + month + "월 " + day + "일 "
-				+ strWeek + "요일 " + hour + "시 " + minute + "분");
+		int minute = now2.get(Calendar.MINUTE);
+		String strMinute = (minute < 10) ? ("0" + minute) : ("" + minute);
+		
+		System.out.println(year + "년 " + strMonth + "월 " + strDay + "일 "
+				+ strWeek + "요일 " + strHour + "시 " + strMinute + "분");
 		
 		
 	}
