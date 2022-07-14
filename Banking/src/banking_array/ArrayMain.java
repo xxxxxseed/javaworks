@@ -1,8 +1,8 @@
-package banking;
+package banking_array;
 
 import java.util.Scanner;
 
-public class Main {
+public class ArrayMain {
 	//배열의 크기가 100인 Account 형 배열 선언
 	private static Account[] accountArray = new Account[100];
 	private static Scanner scanner = new Scanner(System.in);
@@ -110,7 +110,7 @@ public class Main {
 						System.out.println("음수로 입력할 수 없습니다. 다시 입력하세요.");
 					}else {
 						account.setBalance(account.getBalance() + money);
-						System.out.printf("%,d원 정상 입금되었습니다.", money);
+						System.out.printf("%,d원 정상 입금되었습니다.\n", money);
 						break;
 					}
 				} //안쪽 while 닫기
@@ -160,7 +160,7 @@ public class Main {
 						System.out.println("음수를 입력할 수 없습니다. 다시 입력하세요.");
 					}else {
 						account.setBalance(account.getBalance() - money);
-						System.out.printf("%,d원 정상 출금되었습니다.", money);
+						System.out.printf("%,d원 정상 출금되었습니다.\n", money);
 						break;
 					}
 				} //안쪽 while 닫기
