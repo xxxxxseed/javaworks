@@ -17,12 +17,21 @@ public class ReadSample2 {
 			//100개 크기의 배열 생성
 			byte[] buffer = new byte[100];
 			
-			int data;
+			/*int data;
 			while((data = is.read(buffer)) != -1) {
 				for(int i = 0; i < data; i++) {		//읽은 수만큼 출력
 					System.out.println(buffer[i]);
 				}
+			}*/
+			
+			while(true) {
+				int data = is.read(buffer);
+				if(data == -1) break;
+				for(int i = 0; i < data; i++) {		//읽은 수만큼 출력
+					System.out.println(buffer[i]);
+				}
 			}
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {

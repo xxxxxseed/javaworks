@@ -13,7 +13,7 @@ public class FileCopyExample2 {
 		long start = 0, end = 0;
 		
 		String originFile = "C:/File/bg0.jpg";
-		String copyFile = "C:/File/bg3.jpg";
+		String copyFile = "C:/File/bg4.jpg";
 		
 		try(FileInputStream fis = new FileInputStream(originFile);
 			FileOutputStream fos = new FileOutputStream(copyFile)){

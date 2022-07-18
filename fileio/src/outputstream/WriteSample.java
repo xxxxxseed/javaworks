@@ -19,6 +19,7 @@ public class WriteSample {
 		os.write(a);	//파일에 쓰기
 		os.write(b);
 		os.write(c);
+		os.write(40);
 		
 		os.flush();		//출력 버퍼에 잔류하는 모든 바이트를 출력
 		os.close();

@@ -13,8 +13,14 @@ public class ReadSample {
 		InputStream is = new FileInputStream("C:/File/test1.db");
 		
 		//파일 내용 읽기
-		int readByte;
+		/*int readByte;
 		while((readByte = is.read()) != -1) {	//1바이트 씩 읽어 파일 끝에 도달하면
+			System.out.println(readByte);
+		}*/
+		
+		while(true) {
+			int readByte = is.read();
+			if(readByte == -1) break;	//파일의 끝에 도달함(읽을 바이트가 없음)
 			System.out.println(readByte);
 		}
 		
